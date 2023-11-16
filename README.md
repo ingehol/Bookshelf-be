@@ -32,7 +32,7 @@ Password:
 There's 3 database tables, Users, Books and Library. Users and Books have a many-to-many relationship, so I've created Library to have the foreign keys + some additional information.
 These are created in schema.sql, and populated with (some) data in data.sql
 
-### TODO: What I would've done with more time:
+### TODO: what I'd like to do:
 - Create tests
 - Better/safer security with authentication, and an admin page
 - Less methods that return void, especially the POST-methods (some return void)
