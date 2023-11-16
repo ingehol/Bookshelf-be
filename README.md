@@ -13,6 +13,7 @@ Pass: pass
 The simplest way to start this application is to the main method in the BookshelfApplication.java class (path: bookshelf/src/main/java/dev/ingeb/bookshelf/) from your IDE.
 
 Alternatively you can use the Spring Boot Maven plugin like so:
+
 ```mvn spring-boot:run```
 
 This will run on http://localhost:8080/ in case you want to try out some of the endpoints without doing it through the FE.
