@@ -1,0 +1,34 @@
+CREATE TABLE IF NOT EXISTS USERS
+(
+    userId INTEGER PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    firstName VARCHAR(100),
+    lastName VARCHAR(100),
+    userRole VARCHAR(5) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS BOOKS
+(
+    bookId VARCHAR(100) PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(100) ARRAY,
+    smallPicture VARCHAR(255),
+    largePicture VARCHAR(255),
+    releaseYear INTEGER,
+    issn VARCHAR(100) ARRAY,
+    publisher VARCHAR(100),
+    pages INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS LIBRARY
+(
+    userId INTEGER NOT NULL,
+    bookId VARCHAR(100) NOT NULL,
+    FOREIGN KEY (userId) REFERENCES USERS(userId),
+    FOREIGN KEY (bookId) REFERENCES BOOKS(bookId),
+    isFavorite BOOLEAN,
+    hasRead BOOLEAN,
+    readDate DATE
+);
