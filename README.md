@@ -1,7 +1,7 @@
 # This is the backend part of the Bookshelf application
 This was written with Java Spring Boot, with a H2 in-memory database, and Lombok to remove a lot of the excess boilerplate code that Java has. Using SpringBoot Security with the BCryptPasswordEncoder to encrypt the passwords + verify that the login password matches the encrypted password from the DB.
 
-I've created a REST api, and use Dalesbred to fetch data from the database.
+I've created a REST api, and use Dalesbred to fetch data from the database.\
 The H2 database will not persist the data, as it's an in-memory database. It's mostly used for use cases like for example: rapid prototyping, testing, high performance operations, read-only databases. It's not something I would've use in production, it's just nice for projects like these where the data doesnt really have to be kept.
 
 I've populated the database with some data, just for testing/viewing purposes, with the user login:
@@ -12,16 +12,14 @@ Pass: pass
 
 
 ## Start project
-The simplest way to start this application is to the main method in the BookshelfApplication.java class (path: bookshelf/src/main/java/dev/ingeb/bookshelf/) from your IDE.
-
+The simplest way to start this application is to the main method in the BookshelfApplication.java class (path: bookshelf/src/main/java/dev/ingeb/bookshelf/) from your IDE.\
 Alternatively you can use the Spring Boot Maven plugin like so:
 
 ```mvn spring-boot:run```
 
 
 
-This will run on [http://localhost:8080/](http://localhost:8080/) in case you want to try out some of the endpoints without doing it through the FE.
-
+This will run on [http://localhost:8080/](http://localhost:8080/) in case you want to try out some of the endpoints without doing it through the FE.\
 You can also check out the H2 database where you can query directly against the database here: [localhost:8080/h2/](http://localhost:8080/h2/)
 ```
 Driver class: org.h2.Driver
