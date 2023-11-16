@@ -76,7 +76,7 @@ public class UserStore {
 
     public List<UserResponse> getAllUsers() {
         return database.findAll(UserResponse.class, """
-                SELECT userId, username, email, firstname, lastname, userRole
+                SELECT username, email, firstname, lastname
                 FROM Users
                 """
         );
