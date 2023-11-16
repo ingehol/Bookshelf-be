@@ -16,6 +16,8 @@ Alternatively you can use the Spring Boot Maven plugin like so:
 
 ```mvn spring-boot:run```
 
+
+
 This will run on http://localhost:8080/ in case you want to try out some of the endpoints without doing it through the FE.
 You can also check out the H2 database where you can query directly against the database here: http://localhost:8080/h2/
 Driver class: org.h2.Driver
